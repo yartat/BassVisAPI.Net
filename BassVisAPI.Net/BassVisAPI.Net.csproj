@@ -1,7 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup Condition="'$(Platform)' == ''">
+   <Platform>x86</Platform>
+  </PropertyGroup>
+
   <PropertyGroup>
-    <TargetFrameworks>net20;net40;net45</TargetFrameworks>
+    <TargetFrameworks>net40;net45</TargetFrameworks>
     <PackageId>Bass_Vis.NET</PackageId>
     <Product>Bass_Vis.NET Library</Product>
     <Description>.NET wrapper for Bass_Vis 2.4.4.1</Description>
@@ -19,8 +23,6 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <RootNamespace>BassVisAPI</RootNamespace>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net20|x86'" />
 
   <ItemGroup>
     <PackageReference Include="BASS.Vis.Native" Version="2.4.4.1" />
