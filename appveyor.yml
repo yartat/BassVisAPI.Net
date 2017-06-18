@@ -1,0 +1,30 @@
+version: 2.4.4.1
+
+branches:
+  only:
+  - master
+
+configuration: Release
+
+platform: x86
+
+image: Visual Studio 2017
+
+cache:
+  - packages -> **\packages.config
+
+before_build:
+- cmd: >-
+    appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+
+    appveyor-retry nuget restore
+
+build:
+  publish_nuget: true
+  verbosity: minimal
+
+artifacts:
+
+- path: ./BassVisAPI.Net/bin/x86/Release/*.nupkg
+
+  name: Nuget package

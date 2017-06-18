@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net20;net40;net45</TargetFrameworks>
+    <PackageId>Bass_Vis.NET</PackageId>
+    <Product>Bass_Vis.NET Library</Product>
+    <Description>.NET wrapper for Bass_Vis 2.4.4.1</Description>
+    <Version>2.4.4.1</Version>
+    <AssemblyVersion>2.4.4.1</AssemblyVersion>
+    <ProductVersion>2.4.4.1</ProductVersion>
+    <Copyright>MIT</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <Company />
+    <Authors />
+    <PackageProjectUrl>https://github.com/yartat/BassVisAPI.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/yartat/BassVisAPI.Net</RepositoryUrl>
+    <PackageTags>BASS visualization wrapper</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <RootNamespace>BassVisAPI</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net20|x86'" />
+
+  <ItemGroup>
+    <PackageReference Include="BASS.Vis.Native" Version="2.4.4.1" />
+    <PackageReference Include="JetBrains.Annotations" Version="10.4.0" />
+  </ItemGroup>
+
+</Project>
